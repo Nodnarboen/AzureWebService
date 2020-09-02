@@ -3,7 +3,7 @@ $webappname=$args[1]
 $location="Central US"
 
 # Create a resource group.
-New-AzResourceGroup -Name $resourceGroupName -Location $location
+#New-AzResourceGroup -Name $resourceGroupName -Location $location
 
 # Create an App Service plan in `Free` tier.
 New-AzAppServicePlan -Name $webappname -Location $location `
