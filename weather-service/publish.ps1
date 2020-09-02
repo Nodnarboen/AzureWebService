@@ -20,5 +20,5 @@ $xml = [xml](Get-AzWebAppPublishingProfile -Name $webappname `
 
 $CurrentDir = Get-Location
 $CurrentDirPath = Join-Path -Path $CurrentDir -ChildPath  "/"  
-$FilePath = $CurrentDirPath + "weather-express-app.zip"
+$FilePath = $CurrentDirPath + "weather-service-app.zip"
 Publish-AzWebapp -ResourceGroupName  $resourceGroupName -Name $webappname -ArchivePath $FilePath
