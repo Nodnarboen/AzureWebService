@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .container
+        h1 Welcome to #{title}
+        p This little app is supposed to demonstrate some of the amazing monitoring functionality of the Dynatrace Node.js agent.
+
+        h3 Previously visited locations
+
+        if (locationsError) 
+            p There was an error fetching the previously visited locations. This usually means that something is wrong with your connection to Redis. Don't worry, nothing will break, only the "previously visited locations" feature is unavailable:       
+                pre #{locationsError}
+        else if (locations && locations.length > 0)
+            ul
+                each location in locations
+                    li #{location}
+        else
+            p No previously visited locations found. What are you waiting for - check some cities for their weather!

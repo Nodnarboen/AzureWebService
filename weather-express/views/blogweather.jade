@@ -1,0 +1,25 @@
+mixin weatherPanel(data)
+
+    .col-xs-12.col-sm-4.col-md-4.col-lg-3
+      .panel.panel-primary.weather-panel
+
+        .panel-body
+          .row
+            .col-xs-3
+              img(src="http://openweathermap.org/img/w/#{data.weather[0].icon}.png", alt=data.weather[0].description)
+            .col-xs-4
+              .temperature
+                | #{Math.round(data.main ? data.main.temp : data.temp.eve)} <small>°C</small>
+
+            .col-xs-5
+              .condition=data.weather[0].main
+              .wind
+                | Wind #{Math.round(data.wind ? data.wind.speed : data.speed * 10) / 10} m/s
+
+
+
+block content
+  .container-fluid
+    .row
+        +weatherPanel(data)
+
