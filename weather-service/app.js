@@ -9,7 +9,7 @@ var port = process.env.PORT || 8080;
 //To allow Weather App to authenticate in mongo DB replace below line with:
 //mongoose.connect('mongodb://labuser:labpass@localhost:27017/EasyTravelWeatherCache',{auth:{authdb:"admin"}});
 //mongoose.connect('mongodb://localhost/EasyTravelWeatherCache');
-mongoose.connect('mongodb://bootcamp20-cosmos-db:kPYH2TZ6quVHkdym5BXhEcNaTieullFoXju0kK6OMMY5GiVwAFHCzM3M7zb4MPRVTRyXCMQymuPkdYLb8dEbSQ==@bootcamp20-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb');
+mongoose.connect('mongodb://apacbootcamp-cosmos-db:S2CYCccg5YVBGxvtTMpUbpyaEOYdmoXFVW96qU0DT44jt6GtxFBzeqIGHLOiseCX9pe5YAh1UyHBcFfPtMjqGg==@apacbootcamp-cosmos-db.documents.azure.com:10255/?ssl=true&replicaSet=globaldb');
 var db = mongoose.connection;
 
 function current(req, res, next) {
