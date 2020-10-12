@@ -1,6 +1,6 @@
 $resourceGroupName=$args[0]
 $webappname=$args[1]
-$location="Central US"
+$location="Australia East"
 
 # Create a resource group.
 #New-AzResourceGroup -Name $resourceGroupName -Location $location
